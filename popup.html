@@ -1,33 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turbo-Text Popup</title>
   <style>
     body {
-      width: 200px;
-      padding: 10px;
+      width: 250px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
     }
 
     h2 {
-      color: #333;
+      color: #4CAF50; /* Green color for header */
     }
 
     p {
       color: #666;
+      margin-bottom: 20px;
     }
 
     button {
       margin-top: 10px;
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    #toggleButton {
+      background-color: #4CAF50; /* Green color for "Toggle" button in the default state */
+      color: white;
+    }
+
+    #toggleButton.off {
+      background-color: #FF5733; /* Red color for "Toggle" button when off */
     }
   </style>
+ <script src="scripts/popup.js"></script>
+
 </head>
 
 <body>
   <h2>Turbo-Text Extension</h2>
   <p>This extension bolds 35% of characters in each word on the current page.</p>
-  <button id="toggleButton">Toggle</button>
-  <script src="scripts/popup.js"></script>
-</body>
+  <button id="toggleButton" onclick="toggleExtension()">On</button>
+ </body>
 
 </html>
